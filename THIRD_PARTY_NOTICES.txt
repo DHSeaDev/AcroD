@@ -1,0 +1,42 @@
+Acro-Data (AcroD) - third-party software
+=========================================
+
+Acro-Data's own code is released under the MIT License (see LICENSE).
+The built AcroD.exe also contains the libraries below. Each keeps its own
+licence; the licence names are the ones each package declares. "Build script"
+means the version "BUILD  double click me.bat" installs, so check the exact
+versions inside the exe you distribute (the build output lists them).
+
+Library         Version                   Licence (as declared by the package)
+--------------  ------------------------  -------------------------------------
+PySide6         6.11.1 (Essentials,       LGPL-3.0-only OR GPL-2.0-only OR GPL-3.0-only
+                pinned by build script)
+ (and the Qt libraries it carries; shiboken6)
+pypdf           6.20.1 (pinned)           BSD-3-Clause
+pikepdf         10.11 or newer            MPL-2.0
+pypdfium2       4.30 or newer             BSD-3-Clause, Apache-2.0, plus the licences
+                                          of the PDFium libraries it bundles
+Pillow          12.3 or newer             MIT-CMU
+Tcl/Tk          from the build Python     Tcl/Tk licence (BSD-style). Included only
+                                          when the build script adds the startup card
+                                          (--splash); a build without tkinter omits it.
+Python          the build Python          PSF License (the interpreter inside the exe)
+
+Project pages (full licence texts are published there and in each package):
+  PySide6 / Qt for Python  https://pyside.org
+  pypdf                    https://github.com/py-pdf/pypdf
+  pikepdf                  https://github.com/pikepdf/pikepdf
+  pypdfium2                https://github.com/pypdfium2-team/pypdfium2
+  Pillow                   https://github.com/python-pillow/Pillow
+
+Qt for Python (LGPL-3.0): Acro-Data uses it unmodified under the LGPL. You may
+replace the Qt/PySide6 libraries with your own build. The complete source and
+the build script for AcroD.exe are in this repository, so you can rebuild the
+program against a different PySide6 yourself ("BUILD  double click me.bat").
+
+pikepdf (MPL-2.0): used unmodified. Its source is available at the address
+above.
+
+This file is a notice, not legal advice. Before redistributing a built
+AcroD.exe, check the versions you actually bundled against the project pages
+above and keep their licence files with the program.
